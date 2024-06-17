@@ -119,6 +119,9 @@ class Loader {
 			this.domEls.content.appendChild ( this.domEls.text[ id ] );
 		}
 
-		this.domEls.text[ id ].innerHTML = text;
+		if ( text )
+		{
+			this.domEls.text[ id ].innerHTML = text;
+		}
 	}
 }
