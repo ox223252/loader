@@ -112,16 +112,15 @@ class Loader {
 			this.domEls.text[ id ].parentNode.removeChild ( this.domEls.text[ id ] );
 			delete this.domEls.text[ id ];
 		}
-
-		if ( !this.domEls.text[ id ] )
+		else if ( !this.domEls.text[ id ] )
 		{
 			this.domEls.text[ id ] = document.createElement ( "div" );
 			this.domEls.content.appendChild ( this.domEls.text[ id ] );
 		}
 
-		if ( text )
+		if ( this.domEls.text[ id ] )
 		{
-			this.domEls.text[ id ].innerHTML = text;
+			this.domEls.text[ id ].innerText = text;
 		}
 	}
 }
