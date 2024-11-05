@@ -9,6 +9,7 @@ class Loader {
 			type: "spin",
 			size: 80,
 			thickness: 10,
+			background: undefined,
 		}, params );
 
 
@@ -22,8 +23,8 @@ class Loader {
 		this.domEls.main = document.createElement ( "div" );
 		this.params.parent.appendChild ( this.domEls.main );
 		Object.assign ( this.domEls.main.style, {
-			height: "80px",
-			width: "80px",
+			height: this.params.size+"px",
+			width: this.params.size+"px",
 			position: "fixed",
 			top: "calc( 50% - 40px )",
 			left: "calc( 50% - 40px )",
@@ -36,6 +37,7 @@ class Loader {
 			position: "absolute",
 			top: "-"+this.params.thickness+"px",
 			left: "-"+this.params.thickness+"px",
+			background: this.params.background,
 
 			border: "solid "+this.params.thickness+"px rgba(0, 0, 0, 0.5)",
 			borderBottomColor: "rgb(255, 0, 0)",
