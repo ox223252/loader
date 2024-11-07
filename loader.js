@@ -94,6 +94,11 @@ class Loader {
 			this.#count --;
 		}
 
+		if ( 0 > this.#count )
+		{
+			this.#count = 0;
+		}
+
 		this.#status[ id ] = status;
 
 		this.domEls.main.style.display = ( this.#count != 0 )? "": "none";
