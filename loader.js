@@ -70,6 +70,7 @@ class Loader {
 			justifyContent: "center",
 			top: 0,
 			left: 0,
+			color: this.params.color,
 		} );
 	}
 
@@ -129,5 +130,10 @@ class Loader {
 		{
 			this.domEls.text[ id ].innerText = text;
 		}
+	}
+
+	get textDiv ( )
+	{
+		return this.domEls.content;
 	}
 }
