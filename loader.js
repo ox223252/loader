@@ -10,6 +10,7 @@ class Loader {
 			size: 80,
 			thickness: 10,
 			background: undefined,
+			zIndex: 1,
 		}, params );
 
 
@@ -29,6 +30,7 @@ class Loader {
 			top: "calc( 50% - 40px )",
 			left: "calc( 50% - 40px )",
 			display: "none",
+			zIndex: this.params.zIndex,
 		});
 
 		this.domEls.spin = document.createElement ( "div" );
