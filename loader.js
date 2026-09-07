@@ -10,6 +10,7 @@ class Loader {
 			size: 80,
 			thickness: 10,
 			background: undefined,
+			zIndex: 1,
 		}, params );
 
 
@@ -31,6 +32,7 @@ class Loader {
 			display: "none",
 			borderRadius: "50%",
 			textAlign: "center",
+			zIndex: this.params.zIndex,
 		});
 
 		this.domEls.spin = document.createElement ( "div" );
