@@ -29,6 +29,8 @@ class Loader {
 			top: "calc( 50% - 40px )",
 			left: "calc( 50% - 40px )",
 			display: "none",
+			borderRadius: "50%",
+			textAlign: "center",
 		});
 
 		this.domEls.spin = document.createElement ( "div" );
